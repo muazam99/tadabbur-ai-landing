@@ -5,8 +5,22 @@ import Link from "next/link";
 import FadeInSection from "@/components/animations/FadeInSection";
 import StaggerContainer, { staggerChildVariants } from "@/components/animations/StaggerContainer";
 import { motion } from "framer-motion";
+import toast from 'react-hot-toast';
 
 export default function Home() {
+  const handleAppStoreClick = () => {
+    toast('Coming Soon! Stay tuned.', {
+      icon: '📱',
+      duration: 3000,
+    });
+  };
+
+  const handleGooglePlayClick = () => {
+    toast('Coming Soon! Stay tuned.', {
+      icon: '📱',
+      duration: 3000,
+    });
+  };
   return (
     <div className="min-h-screen bg-white">
       <FadeInSection direction="down" delay={0.2}>
@@ -63,6 +77,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  onClick={handleAppStoreClick}
                 >
                   <Image
                     src="/app_store.png"
@@ -76,6 +91,7 @@ export default function Home() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  onClick={handleGooglePlayClick}
                 >
                   <Image
                     src="/google_play.png"
