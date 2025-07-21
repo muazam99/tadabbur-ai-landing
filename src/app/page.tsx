@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeInSection from "@/components/animations/FadeInSection";
 import StaggerContainer, { staggerChildVariants } from "@/components/animations/StaggerContainer";
 import { motion } from "framer-motion";
@@ -190,7 +191,100 @@ export default function Home() {
             </motion.div>
           </StaggerContainer>
         </section>
+
+        <section className="max-w-4xl mx-auto py-16">
+          <FadeInSection delay={0.2}>
+            <h2 className="text-3xl font-bold text-black mb-12 text-center">
+              Frequently Asked Questions
+            </h2>
+          </FadeInSection>
+          
+          <StaggerContainer staggerDelay={0.1} className="space-y-6">
+            <motion.div 
+              variants={staggerChildVariants}
+              className="bg-gray-50 rounded-lg p-6"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                What makes Tadabbur AI different from other Quran apps?
+              </h3>
+              <p className="text-gray-600">
+                Tadabbur AI uses advanced artificial intelligence to provide personalized insights, thematic connections, and deeper understanding of Quranic verses based on your learning journey and interests.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={staggerChildVariants}
+              className="bg-gray-50 rounded-lg p-6"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                Is the app available in multiple languages?
+              </h3>
+              <p className="text-gray-600">
+                Yes, Tadabbur AI supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={staggerChildVariants}
+              className="bg-gray-50 rounded-lg p-6"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                How does the AI analysis work?
+              </h3>
+              <p className="text-gray-600">
+                Our AI analyzes Quranic text to identify themes, provide contextual explanations, and suggest related verses, helping you discover deeper meanings and connections in your studies.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={staggerChildVariants}
+              className="bg-gray-50 rounded-lg p-6"
+            >
+              <h3 className="text-lg font-semibold text-black mb-2">
+                Is my study data kept private?
+              </h3>
+              <p className="text-gray-600">
+                Absolutely. We prioritize your privacy and ensure that your personal study data is kept secure and private, following the highest standards of data protection.
+              </p>
+            </motion.div>
+          </StaggerContainer>
+        </section>
       </main>
+
+      <footer className="bg-gray-100 border-t border-gray-200 py-8 px-6">
+        <FadeInSection delay={0.1}>
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/app-icon.png"
+                alt="Tadabbur AI"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+              <div className="text-left">
+                <span className="text-lg font-semibold text-black">Tadabbur AI</span>
+                <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
+              </div>
+            </div>
+            
+            <div className="flex gap-6">
+              <Link 
+                href="/privacy-policy" 
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link 
+                href="/terms-of-use" 
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                Terms of Use
+              </Link>
+            </div>
+          </div>
+        </FadeInSection>
+      </footer>
     </div>
   );
 }
