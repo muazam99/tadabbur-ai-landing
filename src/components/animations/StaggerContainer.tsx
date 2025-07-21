@@ -43,7 +43,7 @@ export default function StaggerContainer({
     visible: {
       ...containerVariants.visible,
       transition: {
-        ...containerVariants.visible.transition,
+        ...containerVariants.visible,
         staggerChildren: staggerDelay
       }
     }
