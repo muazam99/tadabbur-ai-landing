@@ -58,45 +58,73 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="max-w-6xl mx-auto py-16">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        <section className="max-w-7xl mx-auto py-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 justify-items-center">
             <div className="relative">
-              <div className="w-64 h-[500px] bg-black rounded-[3rem] p-2">
-                <div className="w-full h-full bg-white rounded-[2.5rem] p-4 flex items-center justify-center">
+              <div className="w-56 h-[450px] bg-black rounded-[3rem] p-2">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <Image
                     src="/screenshot-1.png"
                     alt="App Screenshot 1"
-                    width={240}
-                    height={480}
-                    className="bg-gray-100 rounded-2xl"
+                    width={208}
+                    height={426}
+                    className="w-full h-full object-cover bg-gray-100"
                   />
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="w-64 h-[500px] bg-black rounded-[3rem] p-2">
-                <div className="w-full h-full bg-white rounded-[2.5rem] p-4 flex items-center justify-center">
+              <div className="w-56 h-[450px] bg-black rounded-[3rem] p-2">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <Image
-                    src="/screenshot-1.png"
+                    src="/screenshot-2.png"
                     alt="App Screenshot 2"
-                    width={240}
-                    height={480}
-                    className="bg-gray-100 rounded-2xl"
+                    width={208}
+                    height={426}
+                    className="w-full h-full object-cover bg-gray-100"
                   />
                 </div>
               </div>
             </div>
             
             <div className="relative">
-              <div className="w-64 h-[500px] bg-black rounded-[3rem] p-2">
-                <div className="w-full h-full bg-white rounded-[2.5rem] p-4 flex items-center justify-center">
+              <div className="w-56 h-[450px] bg-black rounded-[3rem] p-2">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
                   <Image
-                    src="/screenshot-1.png"
+                    src="/screenshot-3.png"
                     alt="App Screenshot 3"
-                    width={240}
-                    height={480}
-                    className="bg-gray-100 rounded-2xl"
+                    width={208}
+                    height={426}
+                    className="w-full h-full object-cover bg-gray-100"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="w-56 h-[450px] bg-black rounded-[3rem] p-2">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                  <Image
+                    src="/screenshot-4.png"
+                    alt="App Screenshot 4"
+                    width={208}
+                    height={426}
+                    className="w-full h-full object-cover bg-gray-100"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="w-56 h-[450px] bg-black rounded-[3rem] p-2">
+                <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                  <Image
+                    src="/screenshot-5.png"
+                    alt="App Screenshot 5"
+                    width={208}
+                    height={426}
+                    className="w-full h-full object-cover bg-gray-100"
                   />
                 </div>
               </div>
