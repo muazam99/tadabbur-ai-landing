@@ -24,136 +24,120 @@ export default function TermsOfUse() {
 
       <main className="max-w-4xl mx-auto px-6 py-12">
         <FadeInSection delay={0.4}>
-          <h1 className="text-4xl font-bold text-black mb-8">Terms of Use</h1>
-          <p className="text-gray-600 mb-8">Last updated: January 21, 2025</p>
+          <h1 className="text-4xl font-bold text-black mb-4">Terms of Use</h1>
+          <div className="text-gray-600 mb-8 space-y-1">
+            <p><strong>Last updated:</strong> August 18, 2025</p>
+          </div>
         </FadeInSection>
 
         <div className="prose max-w-none">
           <FadeInSection delay={0.6}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Acceptance of Terms</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                By downloading, installing, or using the Tadabbur AI mobile application, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our app.
-              </p>
+              <h2 className="text-2xl font-semibold text-black mb-4">Respect for Privacy and Confidentiality</h2>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  Users are prohibited from recording or sharing sensitive conversations or information that would violate U.S. privacy laws. This includes confidential communications, private discussions, or any other exchanges legally protected from unauthorized disclosure.
+                </p>
+                <p>
+                  Tadabbur AI does not condone and cannot be held liable for any unauthorized uploading of content that violates institutional policies, copyright law, or privacy laws. Users are fully responsible for ensuring their activities on the platform comply with all applicable legal and institutional requirements.
+                </p>
+                <p>
+                  By using our platform, you agree to indemnify Tadabbur AI against any legal consequences resulting from the unauthorized distribution of material. We trust our users to respect intellectual property, privacy, and institutional policies while using Tadabbur AI.
+                </p>
+              </div>
             </section>
           </FadeInSection>
 
           <FadeInSection delay={0.7}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Description of Service</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Tadabbur AI is a mobile application designed to enhance Quran study through AI-powered insights, personalized learning experiences, and intelligent analysis of Quranic text. Our service provides features including verse analysis, thematic connections, and personalized recommendations.
-              </p>
+              <h2 className="text-2xl font-semibold text-black mb-4">License to View Tadabbur AI Content</h2>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  Provided you comply with these Terms of Use, Tadabbur AI grants you a limited, personal, non-exclusive, non-commercial, revocable, and non-transferable license to access and use the content on our platform. This is strictly for personal, non-commercial, educational use.
+                </p>
+                <p>
+                  You agree not to copy, or access content via automated means (e.g., scripts, bots, or data extraction tools) unless authorized by Tadabbur AI.
+                </p>
+                <p>
+                  If you purchase a subscription or license to access Tadabbur content, it is for individual use only and cannot be shared with others. We may enforce reasonable limits on access to protect against unauthorized use, including limits on time, device usage, or the quantity of materials accessed.
+                </p>
+              </div>
             </section>
           </FadeInSection>
 
           <FadeInSection delay={0.8}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">User Responsibilities</h2>
-              <div className="space-y-4">
+              <h2 className="text-2xl font-semibold text-black mb-4">Refund Policy for Tadabbur AI</h2>
+              
+              <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-medium text-black mb-2">Appropriate Use</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    You agree to use the app respectfully and in accordance with Islamic principles. The app is intended for educational and spiritual purposes related to Quran study.
+                  <h3 className="text-lg font-medium text-black mb-3">1. Eligibility for Refunds</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    Refunds are generally only available under the following conditions:
                   </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-black mb-2">Account Security</h3>
-                  <p className="text-gray-700 leading-relaxed">
-                    You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-black mb-2">Prohibited Activities</h3>
                   <ul className="list-disc pl-6 space-y-1 text-gray-700">
-                    <li>Attempting to gain unauthorized access to the app or its systems</li>
-                    <li>Using the app for any illegal or unauthorized purpose</li>
-                    <li>Interfering with or disrupting the app's functionality</li>
-                    <li>Reverse engineering or attempting to extract source code</li>
+                    <li>You are within the first 30 days of your subscription purchase or renewal.</li>
+                    <li>The subscription was not used excessively or in violation of our Terms of Service.</li>
+                    <li>Technical issues that are caused by Tadabbur AI and could not be resolved within a reasonable time after the issue was reported.</li>
+                    <li>Accidental or duplicate payments.</li>
                   </ul>
                 </div>
-              </div>
-            </section>
-          </FadeInSection>
 
-          <FadeInSection delay={0.9}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Intellectual Property</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                The Tadabbur AI app, including its design, features, and AI algorithms, is protected by intellectual property laws. The Quranic text and translations used in the app are sourced from authentic and recognized sources, and we respect the sacred nature of this content.
-              </p>
-            </section>
-          </FadeInSection>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">2. No Refunds for Inactive Accounts</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    We do not provide refunds for unused or inactive accounts. If you forget to cancel your subscription and it renews automatically, you are still responsible for that charge. Please ensure you manage your subscription settings in your account.
+                  </p>
+                </div>
 
-          <FadeInSection delay={1.0}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">AI-Generated Content</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our AI provides insights and analysis to enhance your understanding of the Quran. While we strive for accuracy, AI-generated content should be considered as supplementary study material and not as authoritative religious interpretation. We encourage users to consult with qualified Islamic scholars for authoritative guidance.
-              </p>
-            </section>
-          </FadeInSection>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">3. Refund Request Process</h3>
+                  <p className="text-gray-700 leading-relaxed mb-3">
+                    To request a refund:
+                  </p>
+                  <ul className="list-disc pl-6 space-y-1 text-gray-700">
+                    <li>Email our support team at <a href="mailto:support@hashtech.app" className="text-blue-600 hover:text-blue-800 underline">support@hashtech.app</a> with the subject line "Refund Request."</li>
+                    <li>Include the following details: your name, email address, subscription plan, and the reason for your refund request.</li>
+                    <li>Our team will review your request and respond within 5-7 business days.</li>
+                  </ul>
+                </div>
 
-          <FadeInSection delay={1.1}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Subscription and Payments</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Some features of Tadabbur AI may require a subscription. Subscription fees are billed according to the plan you select. You may cancel your subscription at any time through your device's app store settings. Refunds are subject to the app store's refund policy.
-              </p>
-            </section>
-          </FadeInSection>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">4. Pro-Rated Refunds</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    If you cancel your subscription partway through a billing cycle, you may be eligible for a pro-rated refund based on the number of unused days in the billing period.
+                  </p>
+                </div>
 
-          <FadeInSection delay={1.2}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Limitation of Liability</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Tadabbur AI is provided "as is" without warranties of any kind. We shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the app. Our liability is limited to the maximum extent permitted by law.
-              </p>
-            </section>
-          </FadeInSection>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">5. Non-Refundable Cases</h3>
+                  <ul className="list-disc pl-6 space-y-1 text-gray-700">
+                    <li>Refund requests made after 30 days of subscription purchase.</li>
+                    <li>Refunds for promotional offers, discounts, or special pricing.</li>
+                    <li>Monthly subscription fees after the initial 30-day period.</li>
+                    <li>Termination of your account due to a violation of our Terms of Service.</li>
+                  </ul>
+                </div>
 
-          <FadeInSection delay={1.3}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Termination</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We reserve the right to terminate or suspend your access to the app at any time for violation of these terms or for any other reason. You may also terminate your use of the app at any time by deleting it from your device.
-              </p>
-            </section>
-          </FadeInSection>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">6. Payment Processing Time</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Once your refund request is approved, the refund will be processed through the original payment method. Depending on your financial institution, it may take up to 7-14 business days for the funds to appear in your account.
+                  </p>
+                </div>
 
-          <FadeInSection delay={1.4}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Changes to Terms</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We may update these Terms of Use from time to time. We will notify you of any significant changes through the app or via email. Your continued use of the app after changes indicates your acceptance of the updated terms.
-              </p>
-            </section>
-          </FadeInSection>
-
-          <FadeInSection delay={1.5}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Governing Law</h2>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                These Terms of Use shall be governed by and construed in accordance with applicable laws. Any disputes arising from these terms shall be resolved through appropriate legal channels.
-              </p>
-            </section>
-          </FadeInSection>
-
-          <FadeInSection delay={1.6}>
-            <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Contact Information</h2>
-              <p className="text-gray-700 leading-relaxed">
-                If you have any questions about these Terms of Use, please contact us at:
-              </p>
-              <div className="mt-4 text-gray-700">
-                <p>Email: support@tadabburai.com</p>
-                <p>Website: www.tadabburai.com</p>
+                <div>
+                  <h3 className="text-lg font-medium text-black mb-3">7. Changes to This Policy</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Tadabbur AI reserves the right to modify or update this refund policy at any time. We will notify users of any significant changes by posting the updated policy on our website.
+                  </p>
+                </div>
               </div>
             </section>
           </FadeInSection>
         </div>
 
-        <FadeInSection delay={1.7}>
+        <FadeInSection delay={0.9}>
           <div className="mt-12 pt-8 border-t border-gray-200">
             <Link 
               href="/" 
