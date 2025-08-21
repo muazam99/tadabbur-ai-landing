@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-black mb-4">Your Rights</h2>
               <div className="space-y-3 text-gray-700">
-                <p><strong>Delete Your Data:</strong> Request permanent deletion by emailing <a href="mailto:support@hashtech.app" className="text-blue-600 hover:text-blue-800 underline">support@hashtech.app</a>.</p>
+                <p><strong>Delete Your Data:</strong>You have the right to request the permanent deletion of your information from our system at any time.</p>
                 <p><strong>Contact Us:</strong> For questions or support, email <a href="mailto:support@hashtech.app" className="text-blue-600 hover:text-blue-800 underline">support@hashtech.app</a>.</p>
               </div>
             </section>
