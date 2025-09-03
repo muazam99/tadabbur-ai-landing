@@ -9,10 +9,7 @@ import toast from 'react-hot-toast';
 
 export default function Home() {
   const handleAppStoreClick = () => {
-    toast('Coming Soon! Stay tuned.', {
-      icon: '📱',
-      duration: 3000,
-    });
+    window.open("https://apps.apple.com/us/app/tadabbur-ai-quran-chat-notes/id6751010550", "_blank");
   };
 
   const handleGooglePlayClick = () => {
