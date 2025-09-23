@@ -12,12 +12,12 @@ export default function TermsOfUse() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/app-icon.png"
-              alt="Tadabbur AI"
+              alt="Quran Times"
               width={50}
               height={50}
               className="rounded-lg"
             />
-            <span className="text-xl font-semibold text-black">Tadabbur AI</span>
+            <span className="text-xl font-semibold text-black">Quran Times</span>
           </Link>
         </header>
       </FadeInSection>
@@ -39,10 +39,10 @@ export default function TermsOfUse() {
                   Users are prohibited from recording or sharing sensitive conversations or information that would violate U.S. privacy laws. This includes confidential communications, private discussions, or any other exchanges legally protected from unauthorized disclosure.
                 </p>
                 <p>
-                  Tadabbur AI does not condone and cannot be held liable for any unauthorized uploading of content that violates institutional policies, copyright law, or privacy laws. Users are fully responsible for ensuring their activities on the platform comply with all applicable legal and institutional requirements.
+                  Quran Times does not condone and cannot be held liable for any unauthorized uploading of content that violates institutional policies, copyright law, or privacy laws. Users are fully responsible for ensuring their activities on the platform comply with all applicable legal and institutional requirements.
                 </p>
                 <p>
-                  By using our platform, you agree to indemnify Tadabbur AI against any legal consequences resulting from the unauthorized distribution of material. We trust our users to respect intellectual property, privacy, and institutional policies while using Tadabbur AI.
+                  By using our platform, you agree to indemnify Quran Times against any legal consequences resulting from the unauthorized distribution of material. We trust our users to respect intellectual property, privacy, and institutional policies while using Quran Times.
                 </p>
               </div>
             </section>
@@ -50,13 +50,13 @@ export default function TermsOfUse() {
 
           <FadeInSection delay={0.7}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">License to View Tadabbur AI Content</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4">License to View Quran Times Content</h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Provided you comply with these Terms of Use, Tadabbur AI grants you a limited, personal, non-exclusive, non-commercial, revocable, and non-transferable license to access and use the content on our platform. This is strictly for personal, non-commercial, educational use.
+                  Provided you comply with these Terms of Use, Quran Times grants you a limited, personal, non-exclusive, non-commercial, revocable, and non-transferable license to access and use the content on our platform. This is strictly for personal, non-commercial, educational use.
                 </p>
                 <p>
-                  You agree not to copy, or access content via automated means (e.g., scripts, bots, or data extraction tools) unless authorized by Tadabbur AI.
+                  You agree not to copy, or access content via automated means (e.g., scripts, bots, or data extraction tools) unless authorized by Quran Times.
                 </p>
                 <p>
                   If you purchase a subscription or license to access Tadabbur content, it is for individual use only and cannot be shared with others. We may enforce reasonable limits on access to protect against unauthorized use, including limits on time, device usage, or the quantity of materials accessed.
@@ -67,7 +67,7 @@ export default function TermsOfUse() {
 
           <FadeInSection delay={0.8}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Refund Policy for Tadabbur AI</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4">Refund Policy for Quran Times</h2>
               
               <div className="space-y-6">
                 <div>
@@ -78,7 +78,7 @@ export default function TermsOfUse() {
                   <ul className="list-disc pl-6 space-y-1 text-gray-700">
                     <li>You are within the first 30 days of your subscription purchase or renewal.</li>
                     <li>The subscription was not used excessively or in violation of our Terms of Service.</li>
-                    <li>Technical issues that are caused by Tadabbur AI and could not be resolved within a reasonable time after the issue was reported.</li>
+                    <li>Technical issues that are caused by Quran Times and could not be resolved within a reasonable time after the issue was reported.</li>
                     <li>Accidental or duplicate payments.</li>
                   </ul>
                 </div>
@@ -129,7 +129,7 @@ export default function TermsOfUse() {
                 <div>
                   <h3 className="text-lg font-medium text-black mb-3">7. Changes to This Policy</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Tadabbur AI reserves the right to modify or update this refund policy at any time. We will notify users of any significant changes by posting the updated policy on our website.
+                    Quran Times reserves the right to modify or update this refund policy at any time. We will notify users of any significant changes by posting the updated policy on our website.
                   </p>
                 </div>
               </div>

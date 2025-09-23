@@ -12,12 +12,12 @@ export default function PrivacyPolicy() {
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/app-icon.png"
-              alt="Tadabbur AI"
+              alt="Quran Times"
               width={50}
               height={50}
               className="rounded-lg"
             />
-            <span className="text-xl font-semibold text-black">Tadabbur AI</span>
+            <span className="text-xl font-semibold text-black">Quran Times</span>
           </Link>
         </header>
       </FadeInSection>
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
         <div className="prose max-w-none">
           <FadeInSection delay={0.6}>
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-black mb-4">Welcome to Tadabbur AI</h2>
+              <h2 className="text-2xl font-semibold text-black mb-4">Welcome to Quran Times</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 We care about your privacy and want to make sure you understand how we handle your information when using our app. Below, we explain what information we collect, how we use it, and the choices you have regarding your data.
               </p>
@@ -45,7 +45,7 @@ export default function PrivacyPolicy() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-black mb-4">Who We Are</h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Tadabbur AI is powered by Hashtech, a self-funded company focused on integrating tech solutions and Islam.
+                Quran Times is powered by Hashtech, a self-funded company focused on integrating tech solutions and Islam.
               </p>
             </section>
           </FadeInSection>
@@ -57,7 +57,7 @@ export default function PrivacyPolicy() {
                 <div>
                   <h3 className="text-lg font-medium text-black mb-3">App Stats and Analytics:</h3>
                   <p className="text-gray-700 leading-relaxed mb-3">
-                    To keep Tadabbur AI running efficiently, we collect minimal data such as:
+                    To keep Quran Times running efficiently, we collect minimal data such as:
                   </p>
                   <ul className="list-disc pl-6 space-y-1 text-gray-700">
                     <li>Number of notes you create</li>
@@ -90,7 +90,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-semibold text-black mb-4">Cookies and Other Technologies</h2>
               <div className="space-y-4">
                 <p className="text-gray-700 leading-relaxed">
-                  At Tadabbur AI, we prioritize your privacy and don't rely on third-party "cookies" or similar tracking technologies (e.g., web beacons). However, we use in-house cookies to improve functionality and your experience:
+                  At Quran Times, we prioritize your privacy and don't rely on third-party "cookies" or similar tracking technologies (e.g., web beacons). However, we use in-house cookies to improve functionality and your experience:
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   <li><strong>Communications Cookies:</strong> Ensure smooth data flow and help identify/fix errors.</li>
@@ -190,7 +190,7 @@ export default function PrivacyPolicy() {
           <FadeInSection delay={1.5}>
             <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
               <p className="text-gray-700 leading-relaxed">
-                <strong>Thank you for choosing Tadabbur AI!</strong> We're here to support you on your Quran-learning journey.
+                <strong>Thank you for choosing Quran Times!</strong> We're here to support you on your Quran-learning journey.
               </p>
             </div>
           </FadeInSection>

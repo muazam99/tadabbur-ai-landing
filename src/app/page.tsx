@@ -25,12 +25,12 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/app-icon.png"
-              alt="Tadabbur AI"
+              alt="Quran Times"
               width={50}
               height={50}
               className="rounded-lg"
             />
-            <span className="text-xl font-semibold text-black">Tadabbur AI</span>
+            <span className="text-xl font-semibold text-black">Quran Times</span>
           </div>
         </header>
       </FadeInSection>
@@ -47,13 +47,13 @@ export default function Home() {
                 >
                   <Image
                     src="/app-icon.png"
-                    alt="Tadabbur AI"
+                    alt="Quran Times"
                     width={120}
                     height={120}
                     className="rounded-3xl"
                   />
                 </motion.div>
-                <h1 className="text-xl font-semibold text-black">Tadabbur AI</h1>
+                <h1 className="text-xl font-semibold text-black">Quran Times</h1>
               </div>
             </FadeInSection>
             
@@ -218,10 +218,10 @@ export default function Home() {
               className="bg-gray-50 rounded-lg p-6"
             >
               <h3 className="text-lg font-semibold text-black mb-2">
-                What makes Tadabbur AI different from other Quran apps?
+                What makes Quran Times different from other Quran apps?
               </h3>
               <p className="text-gray-600">
-                Tadabbur AI uses advanced artificial intelligence to provide personalized insights, thematic connections, and deeper understanding of Quranic verses based on your learning journey and interests.
+                Quran Times uses advanced technology to provide personalized insights, thematic connections, and deeper understanding of Quranic verses based on your learning journey and interests.
               </p>
             </motion.div>
 
@@ -233,7 +233,7 @@ export default function Home() {
                 Is the app available in multiple languages?
               </h3>
               <p className="text-gray-600">
-                Yes, Tadabbur AI supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.
+                Yes, Quran Times supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.
               </p>
             </motion.div>
 
@@ -270,13 +270,13 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Image
                 src="/app-icon.png"
-                alt="Tadabbur AI"
+                alt="Quran Times"
                 width={40}
                 height={40}
                 className="rounded-lg"
               />
               <div className="text-left">
-                <span className="text-lg font-semibold text-black">Tadabbur AI</span>
+                <span className="text-lg font-semibold text-black">Quran Times</span>
                 <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
               </div>
             </div>
