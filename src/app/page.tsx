@@ -25,12 +25,12 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image
               src="/app-icon.png"
-              alt="Quran Times"
+              alt="Tadabbur"
               width={50}
               height={50}
               className="rounded-lg"
             />
-            <span className="text-xl font-semibold text-black">Quran Times</span>
+            <span className="text-xl font-semibold text-black">Tadabbur</span>
           </div>
         </header>
       </FadeInSection>
@@ -47,13 +47,13 @@ export default function Home() {
                 >
                   <Image
                     src="/app-icon.png"
-                    alt="Quran Times"
+                    alt="Tadabbur"
                     width={120}
                     height={120}
                     className="rounded-3xl"
                   />
                 </motion.div>
-                <h1 className="text-xl font-semibold text-black">Quran Times</h1>
+                <h1 className="text-xl font-semibold text-black">Tadabbur</h1>
               </div>
             </FadeInSection>
             
@@ -218,10 +218,10 @@ export default function Home() {
               className="bg-gray-50 rounded-lg p-6"
             >
               <h3 className="text-lg font-semibold text-black mb-2">
-                What makes Quran Times different from other Quran apps?
+                What makes Tadabbur different from other Quran apps?
               </h3>
               <p className="text-gray-600">
-                Quran Times uses advanced technology to provide personalized insights, thematic connections, and deeper understanding of Quranic verses based on your learning journey and interests.
+                Tadabbur uses advanced technology to provide personalized insights, thematic connections, and deeper understanding of Quranic verses based on your learning journey and interests.
               </p>
             </motion.div>
 
@@ -233,7 +233,7 @@ export default function Home() {
                 Is the app available in multiple languages?
               </h3>
               <p className="text-gray-600">
-                Yes, Quran Times supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.
+                Yes, Tadabbur supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.
               </p>
             </motion.div>
 
@@ -270,13 +270,13 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <Image
                 src="/app-icon.png"
-                alt="Quran Times"
+                alt="Tadabbur"
                 width={40}
                 height={40}
                 className="rounded-lg"
               />
               <div className="text-left">
-                <span className="text-lg font-semibold text-black">Quran Times</span>
+                <span className="text-lg font-semibold text-black">Tadabbur</span>
                 <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
               </div>
             </div>

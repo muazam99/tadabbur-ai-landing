@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Quran Times",
+  title: "Tadabbur",
   description: "Quranic reflection and contemplation platform",
   icons: {
     icon: "/app-icon.png",
