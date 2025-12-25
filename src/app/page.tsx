@@ -6,13 +6,18 @@ import FadeInSection from "@/components/animations/FadeInSection";
 import StaggerContainer, { staggerChildVariants } from "@/components/animations/StaggerContainer";
 import { motion } from "framer-motion";
 import toast from 'react-hot-toast';
+import { useAptabase } from '@aptabase/react';
 
 export default function Home() {
+  const { trackEvent } = useAptabase();
+
   const handleAppStoreClick = () => {
+    trackEvent('app_store_click');
     window.open("https://apps.apple.com/us/app/tadabbur-ai-quran-chat-notes/id6751010550", "_blank");
   };
 
   const handleGooglePlayClick = () => {
+    trackEvent('google_play_click');
     toast('Coming Soon! Stay tuned.', {
       icon: '📱',
       duration: 3000,
