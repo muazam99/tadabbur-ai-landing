@@ -3,10 +3,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import PageTransition from "@/components/animations/PageTransition";
 import { Analytics } from '@vercel/analytics/next';
 import { Toaster } from 'react-hot-toast';
-import AptabaseDebugProvider from '@/components/AptabaseDebugProvider';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { SEO_DEFAULTS } from '@/lib/constants/seo';
 import './globals.css';
+import { AptabaseProvider } from '@aptabase/react';
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -74,15 +75,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const aptabaseAppKey = process.env.NEXT_PUBLIC_APTABASE_APP_KEY || process.env.APTABASE_APP_KEY;
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PageTransition>
-          <AptabaseDebugProvider>
+          <AptabaseProvider appKey={aptabaseAppKey!}>
             {children}
-          </AptabaseDebugProvider>
+          </AptabaseProvider>
         </PageTransition>
         <Toaster />
       </body>
