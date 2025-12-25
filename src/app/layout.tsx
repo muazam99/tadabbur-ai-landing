@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import PageTransition from "@/components/animations/PageTransition";
 import { Analytics } from '@vercel/analytics/next';
 import { Toaster } from 'react-hot-toast';
-import { AptabaseProvider } from '@aptabase/react';
+import AptabaseDebugProvider from '@/components/AptabaseDebugProvider';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { SEO_DEFAULTS } from '@/lib/constants/seo';
 import './globals.css';
@@ -80,9 +80,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <PageTransition>
-          <AptabaseProvider appKey={process.env.APTABASE_APP_KEY!}>
+          <AptabaseDebugProvider>
             {children}
-          </AptabaseProvider>
+          </AptabaseDebugProvider>
         </PageTransition>
         <Toaster />
       </body>
