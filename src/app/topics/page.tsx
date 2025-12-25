@@ -4,19 +4,19 @@ import Image from 'next/image';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import Header from '@/components/marketing/Header';
-import { EXPLORE_CATEGORIES } from '@/lib/constants/quran';
 import Footer from '@/components/marketing/Footer';
 import CTAButtons from '@/components/marketing/CTAButtons';
+import { fetchCategories } from '@/lib/api/categories';
 
 /**
  * Metadata for the topics listing page
  */
 export const metadata: Metadata = {
-  title: 'Quran Topics - Explore Thematic Learning | Tadabbur AI',
+  title: 'Quran Topics - Explore Thematic Learning | Tadabbur',
   description: 'Explore Quranic themes including Stories of Prophets, Core Concepts, Daily Life Guidance, Prayer & Worship, Moral Character, and Hereafter with AI-powered insights.',
   keywords: ['Quran', 'Topics', 'Quran themes', 'Islamic topics', 'Tadabbur', 'Quran study', 'prophets', 'prayer', 'worship'],
   openGraph: {
-    title: 'Quran Topics | Tadabbur AI',
+    title: 'Quran Topics | Tadabbur',
     description: 'Explore thematic learning in the Quran with AI-powered insights',
     url: `${SITE_CONFIG.url}/topics`,
     type: 'website',
@@ -29,7 +29,9 @@ export const metadata: Metadata = {
 /**
  * Topics listing page component
  */
-export default function TopicsPage() {
+export default async function TopicsPage() {
+  const categories = await fetchCategories();
+
   const breadcrumbs = [
     { name: 'Home', href: SITE_CONFIG.url },
     { name: 'Topics', href: `${SITE_CONFIG.url}/topics` },
@@ -58,19 +60,25 @@ export default function TopicsPage() {
 
           {/* Topics Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {EXPLORE_CATEGORIES.map((topic) => (
+            {categories.map((category) => (
               <Link
-                key={topic.id}
-                href={`/topics/${topic.slug}`}
-                className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors group"
+                key={category.id}
+                href={`/topics/${category.slug}`}
+                className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-colors group"
               >
-                <div className="text-5xl mb-4">{topic.emoji}</div>
-                <h3 className="text-xl font-semibold text-black mb-2 group-hover:text-gray-700 transition-colors">
-                  {topic.name}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {topic.description}
-                </p>
+                <div className="relative h-48 w-full bg-gray-200">
+                  <Image
+                    src={category.imageUrl}
+                    alt={category.name}
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-black group-hover:text-gray-700 transition-colors">
+                    {category.name}
+                  </h3>
+                </div>
               </Link>
             ))}
           </div>

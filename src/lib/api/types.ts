@@ -17,6 +17,16 @@ export interface SurahAPIData {
 }
 
 /**
+ * Category/Topic data structure from the API
+ */
+export interface CategoryAPIData {
+  id: number;
+  name: string;
+  image_url: string;
+  slug: string;
+}
+
+/**
  * API response wrapper for surahs endpoint
  */
 export interface SurahsAPIResponse {
