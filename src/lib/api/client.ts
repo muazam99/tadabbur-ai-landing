@@ -1,10 +1,12 @@
 /**
  * Base API configuration
  */
-const API_BASE_URL = process.env.BASE_URL;
-
-if (!API_BASE_URL) {
-  throw new Error('BASE_URL environment variable is not defined');
+function getApiBaseUrl(): string {
+  const url = process.env.NEXT_PUBLIC_BASE_URL;
+  if (!url) {
+    throw new Error('NEXT_PUBLIC_BASE_URL environment variable is not defined');
+  }
+  return url;
 }
 
 /**
@@ -26,7 +28,7 @@ export async function fetchFromAPI<T>(
   endpoint: string,
   options?: RequestInit
 ): Promise<T> {
-  const url = `${API_BASE_URL}${endpoint}`;
+  const url = `${getApiBaseUrl()}${endpoint}`;
 
   try {
     const response = await fetch(url, {
@@ -53,5 +55,3 @@ export async function fetchFromAPI<T>(
     throw error;
   }
 }
-
-export { API_BASE_URL };

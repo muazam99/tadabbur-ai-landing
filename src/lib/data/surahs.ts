@@ -51,6 +51,7 @@ export async function getAllSurahs(): Promise<SurahSummary[]> {
     slug: `${surah.surah_number}-${surah.surah_name.toLowerCase().replace(/\s+/g, '-')}`,
     verses: surah.number_of_ayah,
     type: surah.revelation_place,
+    description: surah.short_text || '',
   }));
 }
 

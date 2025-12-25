@@ -8,6 +8,7 @@ import CTAButtons from '@/components/marketing/CTAButtons';
 import { fetchSurahs, fetchSurahByNumber } from '@/lib/api/surahs';
 import Header from '@/components/marketing/Header';
 import Footer from '@/components/marketing/Footer';
+import SurahDescriptionWithVerseDialog from '@/components/ui/SurahDescriptionWithVerseDialog';
 
 interface SurahPageProps {
   params: Promise<{ number: string }>;
@@ -119,10 +120,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
           {/* About Card */}
           <div className="bg-linear-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 mb-8 shadow-sm border border-emerald-100">
             <h2 className="text-2xl font-semibold mb-6 text-emerald-900">About {surah.name}</h2>
-            <div
-              className="surah-description"
-              dangerouslySetInnerHTML={{ __html: surah.description }}
-            />
+            <SurahDescriptionWithVerseDialog descriptionHtml={surah.description} />
           </div>
 
           {/* CTA */}

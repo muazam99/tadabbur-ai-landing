@@ -33,3 +33,33 @@ export interface SurahsAPIResponse {
   success: boolean;
   data: SurahAPIData[];
 }
+
+/**
+ * Verse translation data structure from the API
+ */
+export interface VerseTranslation {
+  text: string;
+  language: string;
+  translator: string;
+}
+
+/**
+ * Verse data structure from the API
+ */
+export interface Verse {
+  verse_key: string;
+  text_arabic: string;
+  surah_number: number;
+  ayah_number: number;
+  translation: VerseTranslation;
+}
+
+/**
+ * API response wrapper for verses endpoint
+ */
+export interface VersesResponse {
+  success: boolean;
+  data: Verse[];
+  verse_key: string;
+  language: string;
+}
