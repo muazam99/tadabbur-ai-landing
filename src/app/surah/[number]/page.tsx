@@ -8,6 +8,7 @@ import CTAButtons from '@/components/marketing/CTAButtons';
 import { getSurahByNumberStatic, SURAH_LIST } from '@/lib/data/surah-list';
 import { getSurahSlug } from '@/lib/data/surahs';
 import Header from '@/components/marketing/Header';
+import Footer from '@/components/marketing/Footer';
 
 interface SurahPageProps {
   params: Promise<{ number: string }>;
@@ -159,38 +160,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-100 border-t border-gray-200 py-8 px-6 mt-12">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/app-icon.png"
-                alt="Tadabbur"
-                width={40}
-                height={40}
-                className="rounded-lg"
-              />
-              <div className="text-left">
-                <span className="text-lg font-semibold text-black">Tadabbur</span>
-                <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
-              </div>
-            </div>
-
-            <div className="flex gap-6">
-              <Link
-                href="/privacy-policy"
-                className="text-gray-600 hover:text-black transition-colors duration-200"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms-of-use"
-                className="text-gray-600 hover:text-black transition-colors duration-200"
-              >
-                Terms of Use
-              </Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   );

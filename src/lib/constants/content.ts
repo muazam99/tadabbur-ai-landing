@@ -8,7 +8,7 @@ export const FAQ_DATA = [
   },
   {
     question: 'Is the app available in multiple languages?',
-    answer: 'Yes, Tadabbur supports multiple languages including Arabic, English, and other major languages to make Quranic study accessible to Muslims worldwide.',
+    answer: 'Yes, Tadabbur supports multiple languages including English, Spanish, German and Malay ( others coming soon ) to make Quranic study accessible to Muslims worldwide.',
   },
   {
     question: 'How does the AI analysis work?',

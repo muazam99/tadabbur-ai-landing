@@ -5,7 +5,7 @@ import Link from 'next/link';
 import FadeInSection from '@/components/animations/FadeInSection';
 
 /**
- * Header component with logo
+ * Header component with logo and navigation
  */
 export default function Header() {
   return (
@@ -21,6 +21,14 @@ export default function Header() {
           />
           <span className="text-xl font-semibold text-black">Tadabbur</span>
         </Link>
+        <nav className="flex items-center gap-6">
+          <Link href="/surahs" className="text-sm font-medium text-black hover:text-gray-600 transition-colors">
+            Surahs
+          </Link>
+          <Link href="/topics" className="text-sm font-medium text-black hover:text-gray-600 transition-colors">
+            Topics
+          </Link>
+        </nav>
       </header>
     </FadeInSection>
   );
