@@ -3,6 +3,8 @@
 import FadeInSection from '@/components/animations/FadeInSection';
 import { motion } from 'framer-motion';
 import CTAButtons from './CTAButtons';
+import Link from 'next/link';
+import { BookOpenIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 /**
  * Hero section with app icon and CTA
@@ -41,9 +43,46 @@ export default function Hero() {
           </div>
         </FadeInSection>
 
+        <FadeInSection delay={1}>
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
+            <Link href="/surahs">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative px-8 py-5 bg-white border border-gray-200 rounded-2xl cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-linear-to-r from-emerald-50 to-teal-50 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
+                <div className="relative flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl group-hover:bg-emerald-100 transition-colors duration-300">
+                    <BookOpenIcon className="w-6 h-6 text-gray-500 group-hover:text-emerald-600 transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-gray-900">Browse All Surahs</p>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
+            <Link href="/topics">
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="group relative px-8 py-5 bg-white border border-gray-200 rounded-2xl cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-linear-to-r from-violet-50 to-purple-50 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300" />
+                <div className="relative flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gray-100 rounded-xl group-hover:bg-violet-100 transition-colors duration-300">
+                    <SparklesIcon className="w-6 h-6 text-gray-500 group-hover:text-violet-600 transition-colors duration-300" />
+                  </div>
+                  <div>
+                    <p className="text-base font-semibold text-gray-900">Explore Topics</p>
+                  </div>
+                </div>
+              </motion.div>
+            </Link>
+          </div>
+        </FadeInSection>
         <FadeInSection delay={0.8}>
           <CTAButtons />
         </FadeInSection>
+
       </div>
     </section>
   );
