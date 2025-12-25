@@ -49,7 +49,7 @@ export function generateBreadcrumbs(
 export function getSurahBreadcrumbs(surah: SurahInfo, siteUrl: string) {
   return [
     { name: 'Home', href: siteUrl },
-    { name: 'Quran', href: `${siteUrl}/` },
-    { name: surah.surah_name, href: `${siteUrl}/surah/${surah.surah_number}` },
+    { name: 'Surahs', href: `${siteUrl}/surahs` },
+    { name: surah.surah_name, href: `${siteUrl}/surahs/${surah.surah_number}` },
   ];
 }

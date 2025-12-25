@@ -158,7 +158,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
               {surahs.slice(0, 8).map((surah) => (
                 <Link
                   key={surah.number}
-                  href={`/surah/${surah.slug}`}
+                  href={`/surahs/${surah.slug}`}
                   className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
                 >
                   <div className="font-semibold text-black">{surah.name}</div>

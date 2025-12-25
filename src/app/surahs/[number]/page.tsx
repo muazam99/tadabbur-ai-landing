@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
     openGraph: {
       title: `${surah.name} | Tadabbur AI`,
       description,
-      url: `${SITE_CONFIG.url}/surah/${surah.slug}`,
+      url: `${SITE_CONFIG.url}/surahs/${surah.slug}`,
       type: 'article',
     },
     twitter: {
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
       description,
     },
     alternates: {
-      canonical: `${SITE_CONFIG.url}/surah/${surah.slug}`,
+      canonical: `${SITE_CONFIG.url}/surahs/${surah.slug}`,
     },
   };
 }
@@ -87,8 +87,8 @@ export default async function SurahPage({ params }: SurahPageProps) {
 
   const breadcrumbs = [
     { name: 'Home', href: SITE_CONFIG.url },
-    { name: 'Quran', href: `${SITE_CONFIG.url}/` },
-    { name: surah.name, href: `${SITE_CONFIG.url}/surah/${surah.slug}` },
+    { name: 'Surahs', href: `${SITE_CONFIG.url}/surahs` },
+    { name: surah.name, href: `${SITE_CONFIG.url}/surahs/${surah.slug}` },
   ];
 
   return (
@@ -147,7 +147,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
                 {relatedSurahs.map((s) => (
                   <Link
                     key={s.number}
-                    href={`/surah/${s.slug}`}
+                    href={`/surahs/${s.slug}`}
                     className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
                   >
                     <div className="font-semibold text-black">{s.name}</div>

@@ -61,7 +61,7 @@ export default function SurahsPage() {
             {SURAH_LIST.map((surah) => (
               <Link
                 key={surah.number}
-                href={`/surah/${surah.slug}`}
+                href={`/surahs/${surah.slug}`}
                 className="bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-colors group"
               >
                 <div className="flex items-start justify-between mb-2">

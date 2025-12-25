@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic surah pages (114 pages)
   const surahs = getAllSurahsStatic();
   const surahPages: MetadataRoute.Sitemap = surahs.map(surah => ({
-    url: `${baseUrl}/surah/${surah.slug}`,
+    url: `${baseUrl}/surahs/${surah.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,
