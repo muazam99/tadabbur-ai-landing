@@ -1,0 +1,52 @@
+{
+  "name": "Tadabbur AI - Quran Contemplation App",
+  "short_name": "Tadabbur",
+  "description": "AI-powered Quran contemplation for deeper understanding",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00A651",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "lifestyle"],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-3.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-4.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "/screenshot-5.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    }
+  ]
+}

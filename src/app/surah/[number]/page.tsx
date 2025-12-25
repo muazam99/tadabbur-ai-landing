@@ -1,0 +1,206 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
+import { notFound } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/constants/site';
+import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/JsonLd';
+import CTAButtons from '@/components/marketing/CTAButtons';
+import { getSurahByNumberStatic, SURAH_LIST } from '@/lib/data/surah-list';
+import { getSurahSlug } from '@/lib/data/surahs';
+import Header from '@/components/marketing/Header';
+
+interface SurahPageProps {
+  params: Promise<{ number: string }>;
+}
+
+/**
+ * Generate static params for all 114 surahs at build time
+ */
+export async function generateStaticParams() {
+  return SURAH_LIST.map((surah) => ({
+    number: surah.number.toString(),
+  }));
+}
+
+/**
+ * Generate dynamic metadata for each surah page
+ */
+export async function generateMetadata({ params }: SurahPageProps): Promise<Metadata> {
+  const { number } = await params;
+  const surahNumber = parseInt(number);
+  const surah = getSurahByNumberStatic(surahNumber);
+
+  if (!surah) {
+    return {
+      title: 'Surah Not Found',
+    };
+  }
+
+  const title = `${surah.name} - Surah ${surah.number} | Tadabbur AI`;
+  const description = `Explore ${surah.name}, ${surah.type} surah with ${surah.verses} verses. Learn deeper meanings through AI-powered contemplation with Tadabbur.`;
+
+  return {
+    title,
+    description,
+    keywords: [
+      surah.name,
+      `Surah ${surah.number}`,
+      'Quran',
+      'Tadabbur',
+      surah.type,
+      'Quran study',
+    ],
+    openGraph: {
+      title: `${surah.name} | Tadabbur AI`,
+      description,
+      url: `${SITE_CONFIG.url}/surah/${surah.slug}`,
+      type: 'article',
+    },
+    twitter: {
+      title: surah.name,
+      description,
+    },
+    alternates: {
+      canonical: `${SITE_CONFIG.url}/surah/${surah.slug}`,
+    },
+  };
+}
+
+/**
+ * Dynamic surah page component
+ */
+export default async function SurahPage({ params }: SurahPageProps) {
+  const { number } = await params;
+  const surahNumber = parseInt(number);
+  const surah = getSurahByNumberStatic(surahNumber);
+
+  if (!surah) {
+    notFound();
+  }
+
+  // Get related surahs
+  const index = SURAH_LIST.findIndex(s => s.number === surahNumber);
+  const relatedSurahs = SURAH_LIST.slice(Math.max(0, index - 2), index).concat(
+    SURAH_LIST.slice(index + 1, index + 8)
+  ).slice(0, 8).filter(s => s.number !== surahNumber);
+
+  const breadcrumbs = [
+    { name: 'Home', href: SITE_CONFIG.url },
+    { name: 'Quran', href: `${SITE_CONFIG.url}/` },
+    { name: surah.name, href: `${SITE_CONFIG.url}/surah/${surah.slug}` },
+  ];
+
+  return (
+    <>
+      {/* Structured Data */}
+      <BreadcrumbJsonLd items={breadcrumbs} />
+      <ArticleJsonLd
+        title={surah.name}
+        description={`${surah.name} is the ${surah.number}th chapter of the Quran with ${surah.verses} verses.`}
+      />
+
+      <div className="min-h-screen bg-white">
+        <Header />
+
+        {/* Main Content */}
+        <section className="max-w-4xl mx-auto px-6 py-12">
+          {/* Hero */}
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold mb-4 text-black">
+              {surah.name}
+            </h1>
+            <p className="text-lg text-gray-500">
+              Surah {surah.number} • {surah.type} • {surah.verses} Verses
+            </p>
+          </div>
+
+          {/* About Card */}
+          <div className="bg-gray-50 rounded-lg p-8 mb-8">
+            <h2 className="text-2xl font-semibold mb-4 text-black">About {surah.name}</h2>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {surah.name} is the {surah.number}{getOrdinalSuffix(surah.number)} chapter of the Holy Quran, consisting of {surah.verses} verses.
+              This {surah.type} surah contains profound wisdom and guidance for believers.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              With Tadabbur, you can explore deeper meanings, receive personalized explanations, and connect
+              with the timeless wisdom of this surah through intelligent analysis.
+            </p>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-black">
+              Start Your Journey with {surah.name}
+            </h2>
+            <p className="text-gray-600 mb-6">
+              Download Tadabbur AI to explore this surah with personalized insights
+            </p>
+            <CTAButtons />
+          </div>
+
+          {/* Related Surahs */}
+          {relatedSurahs.length > 0 && (
+            <div>
+              <h3 className="text-xl font-semibold mb-4 text-black">Explore More Surahs</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {relatedSurahs.map((s) => (
+                  <Link
+                    key={s.number}
+                    href={`/surah/${s.slug}`}
+                    className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
+                  >
+                    <div className="font-semibold text-black">{s.name}</div>
+                    <div className="text-sm text-gray-600">Surah {s.number}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-100 border-t border-gray-200 py-8 px-6 mt-12">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <Image
+                src="/app-icon.png"
+                alt="Tadabbur"
+                width={40}
+                height={40}
+                className="rounded-lg"
+              />
+              <div className="text-left">
+                <span className="text-lg font-semibold text-black">Tadabbur</span>
+                <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-6">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-of-use"
+                className="text-gray-600 hover:text-black transition-colors duration-200"
+              >
+                Terms of Use
+              </Link>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </>
+  );
+}
+
+/**
+ * Helper function to get ordinal suffix (1st, 2nd, 3rd, etc.)
+ */
+function getOrdinalSuffix(n: number): string {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return s[(v - 20) % 10] || s[v] || s[0];
+}
