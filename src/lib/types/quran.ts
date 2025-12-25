@@ -24,7 +24,6 @@ export interface TopicCategory {
 export interface SurahSummary {
   number: number;
   name: string;
-  slug: string;
   verses: number;
   type: string;
 }

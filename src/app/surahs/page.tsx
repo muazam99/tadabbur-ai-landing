@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import Header from '@/components/marketing/Header';
-import { SURAH_LIST } from '@/lib/data/surah-list';
+import { fetchSurahs } from '@/lib/api/surahs';
 import Footer from '@/components/marketing/Footer';
 import CTAButtons from '@/components/marketing/CTAButtons';
 
@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 /**
  * Surahs listing page component
  */
-export default function SurahsPage() {
+export default async function SurahsPage() {
+  const surahs = await fetchSurahs();
   const breadcrumbs = [
     { name: 'Home', href: SITE_CONFIG.url },
     { name: 'All Surahs', href: `${SITE_CONFIG.url}/surahs` },
@@ -58,10 +59,10 @@ export default function SurahsPage() {
 
           {/* Surahs Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {SURAH_LIST.map((surah) => (
+            {surahs.map((surah) => (
               <Link
                 key={surah.number}
-                href={`/surahs/${surah.slug}`}
+                href={`/surahs/${surah.number}`}
                 className="bg-gray-50 rounded-lg p-5 hover:bg-gray-100 transition-colors group"
               >
                 <div className="flex items-start justify-between mb-2">

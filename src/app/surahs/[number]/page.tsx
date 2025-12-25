@@ -5,8 +5,7 @@ import { notFound } from 'next/navigation';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import CTAButtons from '@/components/marketing/CTAButtons';
-import { getSurahByNumberStatic, SURAH_LIST } from '@/lib/data/surah-list';
-import { getSurahSlug } from '@/lib/data/surahs';
+import { fetchSurahs, fetchSurahByNumber } from '@/lib/api/surahs';
 import Header from '@/components/marketing/Header';
 import Footer from '@/components/marketing/Footer';
 
@@ -18,7 +17,8 @@ interface SurahPageProps {
  * Generate static params for all 114 surahs at build time
  */
 export async function generateStaticParams() {
-  return SURAH_LIST.map((surah) => ({
+  const surahs = await fetchSurahs();
+  return surahs.map((surah) => ({
     number: surah.number.toString(),
   }));
 }
@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: SurahPageProps): Promise<Metadata> {
   const { number } = await params;
   const surahNumber = parseInt(number);
-  const surah = getSurahByNumberStatic(surahNumber);
+  const surah = await fetchSurahByNumber(surahNumber);
 
   if (!surah) {
     return {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
     openGraph: {
       title: `${surah.name} | Tadabbur AI`,
       description,
-      url: `${SITE_CONFIG.url}/surahs/${surah.slug}`,
+      url: `${SITE_CONFIG.url}/surahs/${surah.number}`,
       type: 'article',
     },
     twitter: {
@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
       description,
     },
     alternates: {
-      canonical: `${SITE_CONFIG.url}/surahs/${surah.slug}`,
+      canonical: `${SITE_CONFIG.url}/surahs/${surah.number}`,
     },
   };
 }
@@ -73,22 +73,23 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
 export default async function SurahPage({ params }: SurahPageProps) {
   const { number } = await params;
   const surahNumber = parseInt(number);
-  const surah = getSurahByNumberStatic(surahNumber);
+  const surah = await fetchSurahByNumber(surahNumber);
 
   if (!surah) {
     notFound();
   }
 
-  // Get related surahs
-  const index = SURAH_LIST.findIndex(s => s.number === surahNumber);
-  const relatedSurahs = SURAH_LIST.slice(Math.max(0, index - 2), index).concat(
-    SURAH_LIST.slice(index + 1, index + 8)
+  // Get all surahs for related surahs
+  const allSurahs = await fetchSurahs();
+  const index = allSurahs.findIndex(s => s.number === surahNumber);
+  const relatedSurahs = allSurahs.slice(Math.max(0, index - 2), index).concat(
+    allSurahs.slice(index + 1, index + 8)
   ).slice(0, 8).filter(s => s.number !== surahNumber);
 
   const breadcrumbs = [
     { name: 'Home', href: SITE_CONFIG.url },
     { name: 'Surahs', href: `${SITE_CONFIG.url}/surahs` },
-    { name: surah.name, href: `${SITE_CONFIG.url}/surahs/${surah.slug}` },
+    { name: surah.name, href: `${SITE_CONFIG.url}/surahs/${surah.number}` },
   ];
 
   return (
@@ -147,7 +148,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
                 {relatedSurahs.map((s) => (
                   <Link
                     key={s.number}
-                    href={`/surahs/${s.slug}`}
+                    href={`/surahs/${s.number}`}
                     className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
                   >
                     <div className="font-semibold text-black">{s.name}</div>

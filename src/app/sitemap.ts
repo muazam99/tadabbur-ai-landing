@@ -1,13 +1,13 @@
 import { MetadataRoute } from 'next';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { TOPIC_CATEGORIES } from '@/lib/constants/quran';
-import { getAllSurahsStatic } from '@/lib/data/surah-list';
+import { fetchSurahs } from '@/lib/api/surahs';
 
 /**
  * Dynamic sitemap for all pages
  * Includes static pages, all 114 surah pages, and topic pages
  */
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = SITE_CONFIG.url;
 
   // Static pages
@@ -33,9 +33,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Dynamic surah pages (114 pages)
-  const surahs = getAllSurahsStatic();
+  const surahs = await fetchSurahs();
   const surahPages: MetadataRoute.Sitemap = surahs.map(surah => ({
-    url: `${baseUrl}/surahs/${surah.slug}`,
+    url: `${baseUrl}/surahs/${surah.number}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.8,

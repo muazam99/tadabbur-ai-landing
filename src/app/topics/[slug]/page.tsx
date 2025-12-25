@@ -6,7 +6,7 @@ import { TOPIC_CATEGORIES, EXPLORE_CATEGORIES } from '@/lib/constants/quran';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/seo/JsonLd';
 import CTAButtons from '@/components/marketing/CTAButtons';
-import { getAllSurahsStatic } from '@/lib/data/surah-list';
+import { fetchSurahs } from '@/lib/api/surahs';
 import Header from '@/components/marketing/Header';
 import Footer from '@/components/marketing/Footer';
 
@@ -78,7 +78,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   }
 
   const topicDetails = EXPLORE_CATEGORIES.find((c) => c.id === topic.id);
-  const surahs = getAllSurahsStatic();
+  const surahs = await fetchSurahs();
   const breadcrumbs = [
     { name: 'Home', href: SITE_CONFIG.url },
     { name: 'Topics', href: `${SITE_CONFIG.url}/` },
@@ -158,7 +158,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
               {surahs.slice(0, 8).map((surah) => (
                 <Link
                   key={surah.number}
-                  href={`/surahs/${surah.slug}`}
+                  href={`/surahs/${surah.number}`}
                   className="bg-gray-50 rounded-lg p-4 hover:bg-gray-100 transition-colors"
                 >
                   <div className="font-semibold text-black">{surah.name}</div>
