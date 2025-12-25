@@ -25,6 +25,7 @@ function toSurahSummary(apiSurah: SurahAPIData): SurahSummary {
     name: apiSurah.surah_name,
     verses: apiSurah.total_verses,
     type: apiSurah.revelation_place,
+    description: apiSurah.surah_description,
   };
 }
 

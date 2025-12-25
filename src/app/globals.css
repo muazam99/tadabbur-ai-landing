@@ -54,3 +54,72 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Surah Description HTML Content Styles */
+.surah-description h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #064e3a;
+}
+
+.surah-description h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #064e9b;
+}
+
+.surah-description p {
+  color: #374151;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.surah-description p:last-child {
+  margin-bottom: 0;
+}
+
+.surah-description strong {
+  font-weight: 600;
+  color: #064e3a;
+}
+
+.surah-description em {
+  font-style: italic;
+}
+
+.surah-description a {
+  color: #059669;
+  text-decoration: underline;
+}
+
+.surah-description a:hover {
+  color: #047857;
+}
+
+.surah-description ul,
+.surah-description ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: #374151;
+}
+
+.surah-description li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.surah-description li:last-child {
+  margin-bottom: 0;
+}
+
+.surah-description ul {
+  list-style-type: disc;
+}
+
+.surah-description ol {
+  list-style-type: decimal;
+}

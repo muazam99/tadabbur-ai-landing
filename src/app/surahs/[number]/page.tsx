@@ -117,16 +117,12 @@ export default async function SurahPage({ params }: SurahPageProps) {
           </div>
 
           {/* About Card */}
-          <div className="bg-gray-50 rounded-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold mb-4 text-black">About {surah.name}</h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              {surah.name} is the {surah.number}{getOrdinalSuffix(surah.number)} chapter of the Holy Quran, consisting of {surah.verses} verses.
-              This {surah.type} surah contains profound wisdom and guidance for believers.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              With Tadabbur, you can explore deeper meanings, receive personalized explanations, and connect
-              with the timeless wisdom of this surah through intelligent analysis.
-            </p>
+          <div className="bg-linear-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 mb-8 shadow-sm border border-emerald-100">
+            <h2 className="text-2xl font-semibold mb-6 text-emerald-900">About {surah.name}</h2>
+            <div
+              className="surah-description"
+              dangerouslySetInnerHTML={{ __html: surah.description }}
+            />
           </div>
 
           {/* CTA */}
@@ -165,13 +161,4 @@ export default async function SurahPage({ params }: SurahPageProps) {
       </div>
     </>
   );
-}
-
-/**
- * Helper function to get ordinal suffix (1st, 2nd, 3rd, etc.)
- */
-function getOrdinalSuffix(n: number): string {
-  const s = ["th", "st", "nd", "rd"];
-  const v = n % 100;
-  return s[(v - 20) % 10] || s[v] || s[0];
 }

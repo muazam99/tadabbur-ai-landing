@@ -26,4 +26,5 @@ export interface SurahSummary {
   name: string;
   verses: number;
   type: string;
+  description: string;
 }
