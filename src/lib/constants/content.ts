@@ -30,7 +30,7 @@ export const CTA_SECTIONS = {
   },
   surah: (surahName: string) => ({
     title: `Start Your Journey with ${surahName}`,
-    subtitle: `Download Tadabbur AI to explore ${surahName} with personalized insights and study tools`,
+    subtitle: `Download Tadabbur to explore ${surahName} with personalized insights and study tools`,
   }),
   topic: (topicName: string) => ({
     title: `Learn More About ${topicName}`,

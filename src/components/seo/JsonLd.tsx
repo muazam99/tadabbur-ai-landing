@@ -20,7 +20,7 @@ export function OrganizationJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Tadabbur AI',
+    name: 'Tadabbur',
     url: 'https://tadabbur.ai',
     logo: 'https://tadabbur.ai/app-icon.png',
     description: 'AI-powered Quran contemplation app for deeper understanding',
@@ -44,7 +44,7 @@ export function SoftwareAppJsonLd() {
   const data = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'Tadabbur AI',
+    name: 'Tadabbur',
     operatingSystem: 'iOS, Android',
     applicationCategory: 'EducationalApplication',
     aggregateRating: {
@@ -130,11 +130,11 @@ export function ArticleJsonLd({
     dateModified: dateModified || new Date().toISOString(),
     author: {
       '@type': 'Organization',
-      name: 'Tadabbur AI',
+      name: 'Tadabbur',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Tadabbur AI',
+      name: 'Tadabbur',
       logo: {
         '@type': 'ImageObject',
         url: 'https://tadabbur.ai/app-icon.png',

@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
     };
   }
 
-  const title = `${surah.name} - Surah ${surah.number} | Tadabbur AI`;
+  const title = `${surah.name} - Surah ${surah.number} | Tadabbur`;
   const description = `Explore ${surah.name}, ${surah.type} surah with ${surah.verses} verses. Learn deeper meanings through AI-powered contemplation with Tadabbur.`;
 
   return {
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: SurahPageProps): Promise<Meta
       'Quran study',
     ],
     openGraph: {
-      title: `${surah.name} | Tadabbur AI`,
+      title: `${surah.name} | Tadabbur`,
       description,
       url: `${SITE_CONFIG.url}/surahs/${surah.number}`,
       type: 'article',
@@ -129,7 +129,7 @@ export default async function SurahPage({ params }: SurahPageProps) {
               Start Your Journey with {surah.name}
             </h2>
             <p className="text-gray-600 mb-6">
-              Download Tadabbur AI to explore this surah with personalized insights
+              Download Tadabbur to explore this surah with personalized insights
             </p>
             <CTAButtons />
           </div>

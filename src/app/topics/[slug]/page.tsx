@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: TopicPageProps): Promise<Meta
     };
   }
 
-  const title = `${topic.name} - Quranic Learning | Tadabbur AI`;
+  const title = `${topic.name} - Quranic Learning | Tadabbur`;
   const description = `Explore ${topic.name} in the Quran through AI-powered insights. Deepen your understanding with personalized explanations and contemplation tools.`;
 
   return {

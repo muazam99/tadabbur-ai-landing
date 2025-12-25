@@ -6,8 +6,8 @@ import { SITE_CONFIG } from './site';
  */
 export const SEO_DEFAULTS = {
   title: {
-    template: '%s | Tadabbur AI',
-    default: 'Tadabbur AI - Quran Contemplation App',
+    template: '%s | Tadabbur',
+    default: 'Tadabbur - Quran Contemplation App',
   },
   description: 'Discover deeper meanings in the Quran through AI-powered insights, personalized learning, and intelligent verse analysis.',
   keywords: [
@@ -27,13 +27,13 @@ export const SEO_DEFAULTS = {
   og: {
     type: 'website' as const,
     locale: 'en_US' as const,
-    siteName: 'Tadabbur AI',
+    siteName: 'Tadabbur',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Tadabbur AI - Quran Contemplation App',
+        alt: 'Tadabbur - Quran Contemplation App',
       },
     ] as const,
   },
@@ -48,7 +48,7 @@ export const SEO_DEFAULTS = {
  */
 export const SURAH_SEO_TEMPLATES = {
   title: (surahName: string, surahNumber: number) =>
-    `${surahName} - Surah ${surahNumber} | Tadabbur AI`,
+    `${surahName} - Surah ${surahNumber} | Tadabbur`,
   description: (surahName: string, type: string, verses: number) =>
     `Explore ${surahName}, ${type} surah with ${verses} verses. Learn deeper meanings through AI-powered contemplation with Tadabbur.`,
 } as const;

@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import { SITE_CONFIG } from '@/lib/constants/site';
 import { BreadcrumbJsonLd } from '@/components/seo/JsonLd';
@@ -7,6 +6,7 @@ import Header from '@/components/marketing/Header';
 import Footer from '@/components/marketing/Footer';
 import CTAButtons from '@/components/marketing/CTAButtons';
 import { fetchCategories } from '@/lib/api/categories';
+import TopicsGrid from '@/components/marketing/TopicsGrid';
 
 /**
  * Metadata for the topics listing page
@@ -59,29 +59,7 @@ export default async function TopicsPage() {
           </div>
 
           {/* Topics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {categories.map((category) => (
-              <Link
-                key={category.id}
-                href={`/topics/${category.slug}`}
-                className="bg-gray-50 rounded-lg overflow-hidden hover:bg-gray-100 transition-colors group"
-              >
-                <div className="relative h-48 w-full bg-gray-200">
-                  <Image
-                    src={category.imageUrl}
-                    alt={category.name}
-                    fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-black group-hover:text-gray-700 transition-colors">
-                    {category.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <TopicsGrid categories={categories} />
 
           {/* Info Card */}
           <div className="mt-16 bg-gray-50 rounded-lg p-8 text-center">
@@ -89,7 +67,7 @@ export default async function TopicsPage() {
               Discover Deeper Connections
             </h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Tadabbur AI helps you discover thematic connections across the Quran, providing
+              Tadabbur helps you discover thematic connections across the Quran, providing
               personalized explanations that bring these topics to life.
             </p>
             <CTAButtons />

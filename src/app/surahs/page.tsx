@@ -12,11 +12,11 @@ import CTAButtons from '@/components/marketing/CTAButtons';
  * Metadata for the surahs listing page
  */
 export const metadata: Metadata = {
-  title: 'All Surahs - Browse 114 Chapters of the Quran | Tadabbur AI',
+  title: 'All Surahs - Browse 114 Chapters of the Quran | Tadabbur',
   description: 'Explore all 114 surahs (chapters) of the Holy Quran. Browse by surah number, name, and verses count. Deepen your understanding with AI-powered contemplation.',
   keywords: ['Quran', 'Surahs', '114 Surahs', 'Quran chapters', 'Tadabbur', 'Quran study'],
   openGraph: {
-    title: 'All Surahs | Tadabbur AI',
+    title: 'All Surahs | Tadabbur',
     description: 'Explore all 114 surahs of the Holy Quran with AI-powered insights',
     url: `${SITE_CONFIG.url}/surahs`,
     type: 'website',
@@ -87,7 +87,7 @@ export default async function SurahsPage() {
               Deepen Your Understanding
             </h2>
             <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-              Tadabbur AI helps you explore deeper meanings, receive personalized explanations,
+              Tadabbur helps you explore deeper meanings, receive personalized explanations,
               and connect with the timeless wisdom of each surah through intelligent analysis.
             </p>
             <CTAButtons />
