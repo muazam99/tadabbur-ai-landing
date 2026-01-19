@@ -7,7 +7,7 @@ import { SITE_CONFIG } from './site';
 export const SEO_DEFAULTS = {
   title: {
     template: '%s | Tadabbur',
-    default: 'Tadabbur - Quran Contemplation App',
+    default: 'Tadabbur - Quran Journaling App',
   },
   description: 'Discover deeper meanings in the Quran through AI-powered insights, personalized learning, and intelligent verse analysis.',
   keywords: [
@@ -16,6 +16,7 @@ export const SEO_DEFAULTS = {
     'AI Quran',
     'Islamic education',
     'Quran contemplation',
+    'Quran Journaling',
     'Tadabbur',
     'Quran learning',
     'Islamic apps',
@@ -33,7 +34,7 @@ export const SEO_DEFAULTS = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Tadabbur - Quran Contemplation App',
+        alt: 'Tadabbur - Quran Journaling App',
       },
     ] as const,
   },

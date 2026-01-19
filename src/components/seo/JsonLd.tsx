@@ -23,7 +23,7 @@ export function OrganizationJsonLd() {
     name: 'Tadabbur',
     url: 'https://tadabbur.ai',
     logo: 'https://tadabbur.ai/app-icon.png',
-    description: 'AI-powered Quran contemplation app for deeper understanding',
+    description: 'AI-powered Quran Journaling app for deeper understanding',
     contactPoint: {
       '@type': 'ContactPoint',
       email: 'support@hashtech.app',
@@ -57,7 +57,7 @@ export function SoftwareAppJsonLd() {
       price: '0',
       priceCurrency: 'USD',
     },
-    description: 'AI-powered Quran contemplation app with chat, study tools, and personalized learning',
+    description: 'AI-powered Quran Journaling app with chat, study tools, and personalized learning',
   };
   return <JsonLd data={data} />;
 }

@@ -7,7 +7,7 @@ export const SITE_CONFIG = {
   fullName: 'Tadabbur',
   domain: 'hashtech.app',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://hashtech.app',
-  description: 'AI-powered Quran contemplation app for deeper understanding',
+  description: 'AI-powered Quran Journaling app for deeper understanding',
   tagline: 'Enhance your Quran study with AI-powered insights',
 
   // Contact
