@@ -22,7 +22,7 @@ export default function Footer() {
             />
             <div className="text-left">
               <span className="text-lg font-semibold text-black">Tadabbur</span>
-              <p className="text-sm text-gray-600">© 2025 All rights reserved.</p>
+              <p className="text-sm text-gray-600">© 2026 Hash Technologies 202503182515 (003749361-M)</p>
             </div>
           </div>
 
