@@ -13,6 +13,13 @@ export const APP_STORE_CONFIG = {
     available: false,
     comingSoonText: 'Coming Soon! Stay tuned.',
   },
+  apk: {
+    // APK hosted on Google Drive to avoid large file in git history
+    url: 'https://drive.google.com/uc?export=download&id=11S8D2c8CZl9cNA0X9crmGWpD9UJShw47',
+    name: 'Download APK',
+    size: '183 MB',
+    available: true,
+  },
 } as const;
 
 /**
