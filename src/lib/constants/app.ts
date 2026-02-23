@@ -8,10 +8,9 @@ export const APP_STORE_CONFIG = {
     available: true,
   },
   android: {
-    url: null,
+    url: 'https://play.google.com/store/apps/details?id=com.hashtech.tadabburai',
     name: 'Get it on Google Play',
-    available: false,
-    comingSoonText: 'Coming Soon! Stay tuned.',
+    available: true,
   },
   apk: {
     // APK hosted on Google Drive to avoid large file in git history
