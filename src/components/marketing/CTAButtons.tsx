@@ -19,12 +19,7 @@ export default function CTAButtons() {
 
   const handleGooglePlayClick = () => {
     trackEvent('google_play_click');
-    if (!APP_STORE_CONFIG.android.available) {
-      toast(APP_STORE_CONFIG.android.comingSoonText, {
-        icon: '📱',
-        duration: 3000,
-      });
-    }
+    window.open(APP_STORE_CONFIG.android.url, '_blank');
   };
 
   const handleApkDownload = () => {
